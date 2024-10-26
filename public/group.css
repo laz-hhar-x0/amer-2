@@ -12,11 +12,10 @@ body{
 
 .white{
     width: 370px;
-    height: 600px;
+    height: 684px;
     background-color: rgb(255, 255, 255);
-    box-shadow: -3px 2px 13px rgb(255, 255, 255);
-    border-radius: 44px;
-    margin: 40px auto;
+    border-radius: 14px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,9 +23,9 @@ body{
 
 .black {
     width: 362px;
-    height: 592px;
+    height: 674px;
     background-color: rgb(0, 0, 0);
-    border-radius: 42px;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -34,9 +33,9 @@ body{
 
 .green{
     width: 346px;
-    height: 574px;
+    height: 658px;
     margin:  auto;
-    border-radius: 34px;
+    border-radius: 4px;
     text-align: center;
     background-color: aliceblue;
     overflow: hidden;
@@ -119,7 +118,6 @@ body{
     font-size: 35px;
     position: absolute;
     bottom: 13px;
-    border-radius: 0 0 35px 35px;
 }
 .listButon #submit{
     width: 30px;

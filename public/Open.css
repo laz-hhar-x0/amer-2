@@ -11,34 +11,33 @@ body{
 
 .white{
     width: 370px;
-    height: 600px;
+    height: 684px;
     background-color: rgb(255, 255, 255);
-    border-radius: 26px;
-    margin: 40px auto;
-    box-shadow: -3px 2px 13px rgb(255, 255, 255);
+    border-radius: 14px;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .black {
-    width: 98%;
-    height: 593px;
+    width: 362px;
+    height: 674px;
     background-color: rgb(0, 0, 0);
-    border-radius: 26px;
+    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .green{
-    width: 96%;
-    height: 580px;
+    width: 346px;
+    height: 658px;
     margin:  auto;
-    border-radius: 26px;
-    background-color: #006f41;
-    /* background-color: #00D57D; */
+    border-radius: 4px;
+    text-align: center;
+    background-color: aliceblue;
+    overflow: hidden;
 }
 
 .contenar{
