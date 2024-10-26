@@ -1,0 +1,81 @@
+<%=
+    <script>
+            function rlod(){
+                                    const one = document.getElementById("one").value;
+                                    const two = document.getElementById("two").value;
+                                    const clk = document.getElementById("clk");
+
+                                if (one ===    arr[1].nameee && two === arr[1].passss) {
+                                        window.location.href = "http://localhost:3000/home";
+                                    }else{
+                                          window.alert('your Name  or Pass is incorrevt  ... ');
+                                    }
+                            }
+        </script>
+
+%>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <% if (one === "0000") { %>
+    <script>
+        window.location.href = "http://localhost:3000/home";
+    </script>
+    <% } else { %>
+        <h1>No redirection</h1>
+    <% } %>
+
+
+
+
+
+
+
+
+
+
+
+
+      function tru(){
+                            const email = document.getElementById("one").value ;
+                            const pas = document.getElementById("two").value;
+
+                            
+                            if (result[0].nameee === email) {
+                                console.log(" --------------  ------------------------------------------");
+                            }else{
+                                console.log(" =============== its same ==============================================");
+                            }
+                        }
+
+
+
+
+
+
+
+
+
+                         function rlod(){
+                                    const one = document.getElementById("one").value;
+                                    const two = document.getElementById("two").value;
+                                    const clk = document.getElementById("clk");
+
+                                if (one ===    arr[1].nameee && two === arr[1].passss) {
+                                        window.location.href = "http://localhost:3000/home";
+                                    }else{
+                                          clk.style.backgroundColor="red";
+                                    }
+                            }
+                    </script> -->
