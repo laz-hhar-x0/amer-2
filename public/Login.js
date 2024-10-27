@@ -15,7 +15,7 @@ function firivi(){
 
    if ( (one === namee) && (two === pass ) ) {
         // window.location.href = "localhost:3000";
-        // window.location.href = "https://amer2.onrender.com/home";
+        window.location.href = "https://amer2.onrender.com/home";
     }else{
        alert(" 😒 YOUR NAME OR PASSWORD IS INCORRECTE 😒 .");
     }
