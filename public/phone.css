@@ -13,8 +13,7 @@ body{
 .white{
     width: 365px;
     height: 730px;
-    background-color: rgb(38, 69, 52);
-    background-image: url("/public/backgrnd/dabos.png");
+    background-color: rgb(64, 129, 78);
     border-radius: 14px;
     margin: 0 auto;
     display: flex;
@@ -38,7 +37,6 @@ body{
     margin:  auto;
     border-radius: 4px;
     text-align: center;
-    /* background-image: url(/backgrnd/green.jpg); */
     overflow: hidden;
 }
 
