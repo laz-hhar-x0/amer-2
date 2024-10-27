@@ -436,7 +436,6 @@ app.post('/Contact', (req, res) => {
       }
 
 
-// let bdy = document.body;
        transporter.sendMail(mailOptions,(error,info)=>{
         if(error){
             console.log("\n \t   ---------------- \n \t  erooor in send mail \n\t   ----------------")

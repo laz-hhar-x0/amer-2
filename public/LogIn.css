@@ -18,7 +18,7 @@ body.fade-out {
 .white{
     width: 365px;
     height: 730px;
-    background-color: rgb(38, 69, 52);
+    /* background-color: rgb(38, 69, 52); */
     background-image: url("/public/backgrnd/dabos.png");
     border-radius: 14px;
     margin: 0 auto;
@@ -30,7 +30,7 @@ body.fade-out {
 .black {
     width: 359px;
     height: 729px;
-    background-color: rgb(64, 129, 78);
+    /* background-color: rgb(64, 129, 78); */
     border-radius: 12px;
     display: flex;
     justify-content: center;
@@ -39,7 +39,7 @@ body.fade-out {
 
 .green{
     width: 352px;
-    height: 718px;
+    height: 733px;
     margin:  auto;
     border-radius: 4px;
     text-align: center;
