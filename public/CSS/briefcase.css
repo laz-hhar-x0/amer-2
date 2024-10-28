@@ -13,8 +13,6 @@ body{
 .white{
     width: 365px;
     height: 730px;
-    background-color: rgb(38, 69, 52);
-    background-image: url("/public/backgrnd/dabos.png");
     border-radius: 14px;
     margin: 0 auto;
     display: flex;
@@ -25,8 +23,6 @@ body{
 .black {
     width: 359px;
     height: 729px;
-    background-color: rgb(64, 129, 78);
-    border-radius: 12px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,11 +31,9 @@ body{
 .green{
     width: 352px;
     height: 718px;
+    background-color: rgb(64, 129, 78);
     margin:  auto;
-    border-radius: 4px;
     text-align: center;
-    background-color: rgb(255, 255, 255);
-    /* background-image: url(/backgrnd/green.jpg); */
     overflow: hidden;
 }
 
@@ -83,14 +77,13 @@ body{
     background-color: #939796;
     color: #404949;
     position:absolute;
-    width: 340px;
+    width: 352px;
     display: flex;
     justify-content: space-between;
     padding: 9px 19px;
     font-size: 35px;
     position: absolute;
-    bottom: 7px;
-    margin-left: 4px;
+    bottom: 6px;
 }
 .listButon #submit{
     width: 30px;

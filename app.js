@@ -376,6 +376,26 @@ app.get("/cars", (req, res) => {
     });
 });
 
+app.get("/camio", (req, res) => {
+  lazhar.find()
+  .then((result ) => {
+      res.render("camio", {arr: result })
+  })
+  .catch((err) => {
+    console.log(err)
+  });
+});
+
+app.get("/moto", (req, res) => {
+  lazhar.find()
+  .then((result ) => {
+      res.render("moto", {arr: result })
+  })
+  .catch((err) => {
+    console.log(err)
+  });
+});
+
 app.get("/briefcase", (req, res) => {
     lazhar.find()
     .then((result ) => {
