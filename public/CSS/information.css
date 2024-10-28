@@ -1,0 +1,42 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: rgb(158, 154, 149);
+}
+
+.id-card{
+    width: 500px;
+    background-color: rgba(125, 125, 125, 0.678);
+    text-align: center;
+    border-radius: 12px;
+    margin: 100px auto;
+    padding: 20px;
+    box-shadow: -4px 4px 14px rgb(246, 244, 244);
+}
+#photo{
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+.qr-section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 40px 0 0  ;
+}
+.qr-section{
+
+}
+.qr-section img{
+    width: 50px;
+}
+.id-details table{
+    margin: 20px auto;
+}

@@ -406,6 +406,16 @@ app.get("/briefcase", (req, res) => {
     });
 });
 
+app.get("/information", (req, res) => {
+  lazhar.find()
+  .then((result ) => {
+      res.render("information", {arr: result })
+  })
+  .catch((err) => {
+    console.log(err)
+  });
+});
+
 // -----------------------------------------------------------------------------------------------------
 
 
