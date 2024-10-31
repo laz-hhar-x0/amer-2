@@ -47,6 +47,15 @@
 
 
 
+
+
+
+
+
+
+
+
+
       function tru(){
                             const email = document.getElementById("one").value ;
                             const pas = document.getElementById("two").value;
@@ -79,3 +88,72 @@
                                     }
                             }
                     </script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                     <% 
+     function firivi(){
+        const one = document.getElementById("one").value;
+        const two = document.getElementById("two").value;
+
+        if ((one === "<% arr[x].nameee %>") && (two === "<% arr[x].passss %>")) {
+                console.log(`Login success! her Name is : ${one}`);
+        }else{
+                alert(" 😒 الايميل أو كلمة السر خاطئة 😒"); 
+        }
+                    }
+  
+  %>
+
+
+
+
+
+
+    <% 
+     function firivi(){
+        const one = document.getElementById("one").value;
+        const two = document.getElementById("two").value;
+
+        if ((one === "<% arr[x].nameee %>") && (two === "<% arr[x].passss %>")) {
+                console.log(`Login success! her Name is : ${one}`);
+        }else{
+                alert(" 😒 الايميل أو كلمة السر خاطئة 😒"); 
+        }
+                    };
+  
+  %>
+
+
+
+
+  <ul>
+
+
+<% for( let i = 0; i < 2; i++ ) { %>
+    
+    <% const one = document.getElementById("one").value; %>
+
+    <% if (arr[0].passss === one) { %>"123#3321"
+    
+     <li>Hello</li>
+    <% } %>
+
+<% } %>
+</ul>

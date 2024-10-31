@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/backgrnd/LogoApp.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/CSS/LogIn.css">
     <title>LogIn</title>
@@ -36,7 +37,7 @@
                                 <h6 style="color: red; padding:5px 0 6px 70px ; cursor: pointer;" >forget password ?</h6>
                                 
                                 <h5 style="color: rgb(255, 255, 255); position: absolute; display: none;" id="incrct">PASSWORD OR E MAIL <br> IS IN CORRECT</h5>
-                                <button type="button" onclick="firivi()" id="clk" class="log">Enter</button>
+                                <button type="button" onclick="clak()" id="clk" class="log">Enter</button>
 
                                 <form action="CreatCompte">
                                     <button id="creaytf" >you d'ont have an account ?</button>
@@ -47,46 +48,116 @@
 
 
                             
+                            
                         </div>
                         
                    </div>
-                         
-
-
-
-
-
-
-
-
-
-
-                           
-                   
-
-
+                
             </div>
          </div>
     </div>
     
 
+
+
+
+
+   
+        
+
+<!-- <script>
+     
+     function clak(){
+    
+    // const namee ='admin';
+    // const pass = "admin";
+
+    const one = document.getElementById("one").value;
+    const two = document.getElementById("two").value;
+
+         getUserByEmail(one);
+
+//    if ( (one === namee) && (two === pass ) ) {
+//      // window.location.href = "https://amer2.onrender.com/home";
+//         window.location.href ="http://localhost:3000/home";
+//     }else{
+//        alert(" ❤️ الايميل أو كلمة السر خاطئة ❤️");
+//     }
+// }
+     }
+</script> -->
+
+
+
+
+
+
+
+
+
+
+
+
+                                             <!-- //8// -->
+
+
+
+                                             <script>
+                                                async function clak() {
+                                                    const email = document.getElementById("one").value;
+                                                    const password = document.getElementById("two").value;
+                                            
+                                                    // إرسال طلب POST إلى الخادم للتحقق من تسجيل الدخول
+                                                    const response = await fetch("/Login", {
+                                                        method: "POST",
+                                                        headers: { "Content-Type": "application/json" },
+                                                        body: JSON.stringify({ email, password })
+                                                    });
+                                            
+                                                    // الحصول على الرد من الخادم
+                                                    const result = await response.json();
+                                            
+                                                    if (result.success) {
+                                                        // إذا كانت البيانات صحيحة، إعادة التوجيه للصفحة الرئيسية
+                                                        window.location.href = result.redirectUrl;
+                                                    } else {
+                                                        // عرض رسالة خطأ إذا كانت البيانات غير صحيحة
+                                                        document.getElementById("incrct").style.display = "block";
+                                                        document.getElementById("incrct").innerText = result.message;
+                                                    }
+                                                }
+                                            </script>
+                                            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
   
 
-  
-   <% for( let x = 0; x <= arr.length; x++ ) { %>
-                 
-      <script>
-        console.log(arr[x].nameee)
-      </script>
-    
-    
-      <% } %>
-
-    
 
 
 
 
-<script src="/js/Login.js"></script>
+
+
+
+
+   
+
+
+<script src="/js/Login.js" type="module"></script>
 </body>
 </html>

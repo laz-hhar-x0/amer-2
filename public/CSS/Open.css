@@ -12,7 +12,7 @@ body{
 .white{
     width: 365px;
     height: 730px;
-    /* background-color: rgb(38, 69, 52); */
+    background-color: rgb(0, 255, 115);
     background-image: url("/public/backgrnd/dabos.png");
     border-radius: 14px;
     margin: 0 auto;

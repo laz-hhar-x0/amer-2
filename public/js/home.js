@@ -1,6 +1,26 @@
 const bdy = document.getElementById("bdy");
 
 
+
+
+
+
+
+bdy.addEventListener('click', function() {
+    window.location.href = "http://localhost:3000/home";
+});
+
+
+
+
+
+
+
+
+
+
+
+
 for (let i = 1; i <= 4; i++) {
     // const element = array[i];
     
