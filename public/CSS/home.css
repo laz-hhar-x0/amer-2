@@ -13,7 +13,7 @@ body{
 
 .white{
     width: 100%;
-    height: 96%;
+    height: 100%;
     border-radius: 14px;
     margin: 0 auto;
     display: flex;
@@ -116,7 +116,7 @@ body{
     background-color: #939796;
     color: #404949;
     position:absolute;
-    width: 430px;
+    width: 400px;
     display: flex;
     justify-content: space-between;
     padding: 9px 19px;
