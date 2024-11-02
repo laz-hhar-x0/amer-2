@@ -239,6 +239,7 @@ app.use(express.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
 
 
+
 const lazhar = require("./models/articleSchema");
 
 const nodemailer = require("nodemailer");
@@ -268,6 +269,8 @@ mongoose.connect("mongodb://lazhhar45:Lazhar123@cluster0-shard-00-00.50x18.mongo
 // ----------------------------------------------------------------------------------------------------------------------
 // ----------------------------------------------------------------------------------------------------------------------
 // --------  GET request -----------------------------------------------------------------------------
+
+
 app.get("/", (req, res) => {
     
     res.render('open', { } );
@@ -290,40 +293,8 @@ app.get('/Contact',(req,res)=>{
 
 
 app.get("/Login",  (req, res) => {
-    // console.log(req.body)
-    //  lazhar.find({mailll:"Hmaida@gmail.com"})
-    //   .then((result ) => {
-      // res.render("LogIn", {arr: result })
-
-    //     console.log(result[0].nameee)
-        
-    //   })
-    //   .catch((err) => {
-    //     console.log(err)
-    //   });
       res.render("LogIn")
 });
-
-//  const getUserByEmail = async  (one) => {
-    
-//      await lazhar.find({mailll:one})
-//       .then((result ) => {
-
-//         console.log("test", result[0].nameee)
-        
-//           res.render("LogIn", {arr: result })
-//       })
-//       .catch((err) => {
-//         console.log(err)
-//       });
-
-//     // await lazhar.find({mailll:one})
-//     //   .then((result ) => {
-//     //     console.log( result[0].nameee)
-//     //   })
-      
-// }
-// module.exports = getUserByEmail
 
 
 // ------------------------------------------------------
@@ -336,54 +307,46 @@ app.get("/Login",  (req, res) => {
 
 
 
-//This is your data: {"_id":"671ea5bdf1e65b491c92b252",
-//"nameee":"Hamida","mailll":"Hmaida@gmail.com","passss":"123321","__v":0}
-
-// app.post("/Login", async (req, res) => {
-//   try {
-//     console.log("--------------------------------------------------\n--------------------------------------------------");
-
-//     const { email, passwordd } = req.body;
-
-//     const user = await lazhar.findOne({ mailll: email });
-
-//     console.log(`This is your data: ${user.passss} : ${user ? user.nameee : 'User not found'}`);
-
-//     if (( user.password === passwordd) && (user && user.password === passwordd)) {
-//       res.json({ success: true, redirectUrl: "/home" });
-//     } else {
-//       res.json({ success: false, message: "البريد أو كلمة المرور غير صحيحة" });
-//     }
-//   } catch (err) {
-//     console.error(err);
-//     res.status(500).json({ success: false, message: "حدث خطأ أثناء العملية" });
-//   }
-// });
 
 app.post("/Login", async (req, res) => {
   try {
     console.log("--------------------------------------------------\n--------------------------------------------------");
 
     const { email, password } = req.body;
-    
+
     // Retrieve user using email
-    const user = await lazhar.findOne({ mailll: email });
+    if (user = await lazhar.findOne({ mailll: email })) {
+      
+    
 
-    console.log(`This is your DATA BASE : ${user ? `${user.mailll} : ${user.passss}` : 'User not found'}`);
-    console.log(`This is your DATA USER : ${email} : ${password} `);
+      console.log(`This is your DATA : ${user ? `${user.mailll} : ${user.passss}` : 'User not found'}`);
+      console.log(`This is your USER : ${email} : ${password}`);
 
-    // Check if both name and password match
-    if (user && user.mailll === email && user.passss === password) {
-      res.json({ success: true, redirectUrl: "/home" });
-    } else {
-      res.json({ success: false, message: "البريد أو كلمة المرور غير صحيحة" });
+      // Check if the password matches
+        if (user && user.passss === password) {
+
+          const userData=[{ emil: user.nameee},{ pas: user.passss }];
+          console.log(userData) 
+          module.exports = userData;
+
+
+
+          res.json({ success: true, redirectUrl: "/home", userData});  
+        } else {
+          res.json({ success: false, message: " 💔 كلمة المرور غير صحيحة " });
+        }
+      }else{
+        res.json({ success: false, message: " 🥲 البريد  غير صحيح" });
+      }
+  }catch (err) {
+        console.error(err);
+        res.status(500).json({ success: false, message: "حدث خطأ أثناء العملية" });
+      
+    
     }
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ success: false, message: "حدث خطأ أثناء العملية" });
-  }
-});
+  });
 
+  
 
 
 
@@ -574,8 +537,6 @@ app.post('/Contact', (req, res) => {
         subject: `client name : (  ${req.body.name} ) `,
         text : `client number : ${req.body.subject}  \n ${req.body.message}` 
       }
-
-
        transporter.sendMail(mailOptions,(error,info)=>{
         if(error){
             console.log("\n \t   ---------------- \n \t  erooor in send mail \n\t   ----------------")
@@ -585,6 +546,4 @@ app.post('/Contact', (req, res) => {
             res.send('success')
         }
       })
-
-
 });

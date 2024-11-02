@@ -1,6 +1,6 @@
 
-const incrct = document.getElementById("incrct");
-const clk = document.getElementById("clk");
+// const incrct = document.getElementById("incrct");
+// const clk = document.getElementById("clk");
 
 
 

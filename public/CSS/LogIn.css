@@ -14,8 +14,8 @@ body.fade-out {
 }
 
 .white{
-    /* width: 365px; */
-    height: 730px;
+    width: 100%;
+    height: 100%;
     /* background-color: rgb(38, 69, 52); */
     background-image: url("/public/backgrnd/dabos.png");
     border-radius: 14px;
@@ -26,7 +26,8 @@ body.fade-out {
 }
 
 .black {
-    height: 729px;
+    width: 100%;
+    height: 100%;
     border-radius: 12px;
     display: flex;
     justify-content: center;
@@ -34,8 +35,8 @@ body.fade-out {
 }
 
 .green{
-    width: 355px;
-    height: 733px;
+    width: 100%;
+    height: 799px;
     margin:  auto;
     border-radius: 4px;
     text-align: center;
@@ -43,8 +44,8 @@ body.fade-out {
     overflow: hidden;
 }
 .green i {
-    margin: 15px 0;
-    font-size: 23px;
+    margin: 55px 0;
+    font-size: 53px;
     
 }
 
@@ -58,6 +59,7 @@ body.fade-out {
 
 
 .continer{
+    margin-top: 10%;
     padding: 30px;
     width: 78%;
     height: 480px;

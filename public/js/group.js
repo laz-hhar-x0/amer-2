@@ -1,6 +1,6 @@
+
+
 const bdy = document.getElementById("bdy");
-
-
 
 for( let i = 1; i <5 ; i++ ){
 
@@ -36,3 +36,71 @@ function care(i) {
     bdy.appendChild(jma3a);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+
+// تعريف المصفوفات
+const namess = ["lazhar", "imad", "yacin", "mohamed", "ilyas", "ayman", "lakhdar", "salim", "mokhtar", "djamal"];
+const images = ["/backgrnd/1.png", "/backgrnd/1.png", "/backgrnd/1.png", "/backgrnd/1.png", "/backgrnd/1.png", "/backgrnd/1.png", "/backgrnd/1.png", "/backgrnd/1.png", "/backgrnd/1.png", "/backgrnd/1.png"];
+
+
+function charg(nom, image) {
+    // البحث عن العنصر "bdy"
+    const bdy = document.getElementById("bdy");
+   
+
+    // إنشاء العناصر وإعدادها
+    const jma3a = document.createElement('div');
+    const h4 = document.createElement('h4');
+    const h3 = document.createElement('h3');
+    const img = document.createElement('img');
+
+    jma3a.id = 'jma3a'; 
+    
+    h4.innerHTML = nom;       // إضافة الاسم من المصفوفة
+    h3.innerHTML = "PAINTER"; // النص الثابت "PAINTER"
+    img.src = image;          // إضافة الصورة من المصفوفة
+    img.alt = "error";
+
+    jma3a.appendChild(img);
+    jma3a.appendChild(h4);
+    jma3a.appendChild(h3);
+
+    bdy.appendChild(jma3a);
+}
+
+// التأكد من أن العنصر "bdy" موجود في HTML قبل استدعاء الدالة
+for (let i = 0; i < 10; i++) {
+    charg(namess[i], images[i]);
+}
+
+})
