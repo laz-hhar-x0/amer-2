@@ -21,7 +21,7 @@ body{
 }
 
 .black {
-    width: 100%;
+    width: 400px;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -30,7 +30,7 @@ body{
 
 .green{
     width: 432px;
-    height: 770px;
+    height: 770px;;
     background-color: rgb(64, 129, 78);
     margin:  auto;
     text-align: center;
