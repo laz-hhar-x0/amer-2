@@ -33,7 +33,7 @@ body{
     width: 432px;
     height: 770px;
     background-color: rgb(64, 129, 78);
-    margin:  auto;
+    margin: 0  auto;
     text-align: center;
     overflow: hidden;
 }
