@@ -22,7 +22,6 @@ body{
 .black {
     width: 100%;
     height: 100%;
-    /* background-color: rgb(64, 129, 78); */
     border-radius: 12px;
     display: flex;
     justify-content: center;
