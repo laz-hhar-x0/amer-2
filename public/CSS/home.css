@@ -55,7 +55,7 @@ body{
     font-size: 10px;  
     margin-top: 3px;
     text-align: left;
-    color: rgb(159, 163, 166);  
+    color: rgb(159, 163, 166); 
 }
 .hed img{
     width: 40px;
@@ -181,7 +181,7 @@ body{
     border-radius: 3x;
 }
 #gren  button{
-    width: 49px;
+    width: 29px;
     height: 12px;
     color: azure;
     padding: 2px;
