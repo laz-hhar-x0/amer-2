@@ -5,33 +5,33 @@ const bdy = document.getElementById("bdy");
 
 
 
- for (let i = 1; i <= 4; i++){
-    care(i);
-}
+//  for (let i = 1; i <= 4; i++){
+//     care(i);
+// }
        
-function care(i) {
-    var jma3a = document.createElement('div');
-    var imgg = document.createElement('img');
+// function care(i) {
+//     var jma3a = document.createElement('div');
+//     var imgg = document.createElement('img');
 
-    var four = document.createElement('h4');
-    var six = document.createElement('h6');
-    var three = document.createElement('h3');
+//     var four = document.createElement('h4');
+//     var six = document.createElement('h6');
+//     var three = document.createElement('h3');
 
-    imgg.src=`/backgrnd/${i}.png`;
+//     imgg.src=`/backgrnd/${i}.png`;
 
 
-    btn.innerHTML = "imad";  
-    btn.innerHTML = "PAINTER";  
-    hsx.innerHTML = 'Street , City ,Country';
+//     btn.innerHTML = "imad";  
+//     btn.innerHTML = "PAINTER";  
+//     hsx.innerHTML = 'Street , City ,Country';
 
-    jma3a.id = 'jma3a'; 
+//     jma3a.id = 'jma3a'; 
 
-    jma3a.appendChild(four);
-    jma3a.appendChild(six);
-    jma3a.appendChild(three);
+//     jma3a.appendChild(four);
+//     jma3a.appendChild(six);
+//     jma3a.appendChild(three);
     
-    bdy.appendChild(jma3a);
-}
+//     bdy.appendChild(jma3a);
+// }
 
 
 
@@ -145,5 +145,71 @@ function care(i) {
 //     bdy.appendChild(car);
 // }
 
+// -------------------------------------------------------------------------------------------------
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    TakeColr();
+});
+
+const a1a = document.getElementById("a1");
+const a2a = document.getElementById("a2");
+const a3a = document.getElementById("a3");
+const a4a = document.getElementById("a4");
+
+function TakeColr() {
+   let lnk =  window.location.href ;
+   
+    if (lnk === "http://localhost:3000/") {
+        console.log("banaa ----------")
+        a1a.style.backgroundColor="#39e19b";
+    } 
+    if (lnk === "http://localhost:3000/groupHalak?") {
+        console.log("hafaf ----------")
+        a2a.style.backgroundColor="#39e19b";
+        a1a.style.backgroundColor="#1b1b1c";
+    }
+    if (lnk === "http://localhost:3000/groupSaback?") {
+        console.log("Saback ----------")
+        a3a.style.backgroundColor="#39e19b";
+        a1a.style.backgroundColor="#1b1b1c";
+    }
+   
+    if (lnk === "http://localhost:3000/groupDahan?") {
+        console.log("groupDahan ----------")
+        a4a.style.backgroundColor="#39e19b";
+        a1a.style.backgroundColor="#1b1b1c";
+    }
+}

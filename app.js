@@ -489,6 +489,35 @@ app.get("/information", (req, res) => {
   });
 });
 
+app.get("/groupDahan", (req, res) => {
+  lazhar.find()
+  .then((result ) => {
+      res.render("groupDahan", {arr: result })
+  })
+  .catch((err) => {
+    console.log(err)
+  });
+});
+
+app.get("/groupSaback", (req, res) => {
+  lazhar.find()
+  .then((result ) => {
+      res.render("groupSaback", {arr: result })
+  })
+  .catch((err) => {
+    console.log(err)
+  });
+});
+
+app.get("/groupHalak", (req, res) => {
+  lazhar.find()
+  .then((result ) => {
+      res.render("groupHalak", {arr: result })
+  })
+  .catch((err) => {
+    console.log(err)
+  });
+});
 // -----------------------------------------------------------------------------------------------------
 
 
