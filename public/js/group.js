@@ -192,7 +192,8 @@ function TakeColr() {
 
 
 function contactt() {
-   window.location.href = "http://localhost:3000/contact?";
+//    window.location.href = "http://localhost:3000/contact?";
+   window.location.href = "https://amer-3.onrender.com/contact?";
     
 }
 
