@@ -192,23 +192,19 @@ const a4a = document.getElementById("a4");
 function TakeColr() {
    let lnk =  window.location.href ;
    
-    if (lnk === "http://localhost:3000/") {
-        console.log("banaa ----------")
+    if (lnk === "http://localhost:3000/group?") {
         a1a.style.backgroundColor="#39e19b";
     } 
-    if (lnk === "http://localhost:3000/groupHalak?") {
-        console.log("hafaf ----------")
+    if (lnk === "https://amer-3.onrender.com/groupHalak?") {
         a2a.style.backgroundColor="#39e19b";
         a1a.style.backgroundColor="#1b1b1c";
     }
-    if (lnk === "http://localhost:3000/groupSaback?") {
-        console.log("Saback ----------")
+    if (lnk === "https://amer-3.onrender.com/groupSaback?") {
         a3a.style.backgroundColor="#39e19b";
         a1a.style.backgroundColor="#1b1b1c";
     }
    
-    if (lnk === "http://localhost:3000/groupDahan?") {
-        console.log("groupDahan ----------")
+    if (lnk === "https://amer-3.onrender.com/groupDahan?") {
         a4a.style.backgroundColor="#39e19b";
         a1a.style.backgroundColor="#1b1b1c";
     }
