@@ -10,11 +10,12 @@ body{
 }
 
 .form-container{
-    width: 70%;
+    width: 90%;
+    margin: 0 auto;
     background-color: #ffffff;
     position: relative;
-    left: 10%;
-    top: 50px;
+    top: 70px;
+    text-align: center;
     padding: 50px 30px 0;
     height: 600px;
     box-shadow: 1px 1px ;
@@ -50,9 +51,5 @@ textarea:hover{
 
 .eror{
     color: #00C792;
-    margin: 10px 0;
-}
-.eror{
-    color: #00C792;
-    margin: 15px 50px ;
+    margin: 15px auto ;
 }
