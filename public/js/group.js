@@ -156,30 +156,6 @@ const bdy = document.getElementById("bdy");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
     TakeColr();
 });
@@ -209,3 +185,18 @@ function TakeColr() {
         a1a.style.backgroundColor="#1b1b1c";
     }
 }
+
+
+// -----------------------------------------------------------------------------------
+
+
+
+function contactt() {
+   window.location.href = "http://localhost:3000/contact?";
+    
+}
+
+
+
+
+
