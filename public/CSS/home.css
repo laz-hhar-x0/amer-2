@@ -30,7 +30,7 @@ body{
 }
 
 .green{
-    width: 439px;
+    width: 449px;
     height: 764px;
     background-color: rgb(64, 129, 78);
     margin: 0  auto;
@@ -74,7 +74,7 @@ body{
 }
 
 .containerGreen .titleadd{
-    font-size: 6px;
+    font-size: 7px;
     color: aliceblue;
     margin-left: 200px;
     padding: 9px 0;
