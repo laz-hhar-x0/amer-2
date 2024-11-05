@@ -8,21 +8,40 @@
 
 
 
-const bdy = document.getElementById("bdy");
-bdy.addEventListener('click', function() {
-    window.location.href = "http://localhost:3000/home";
+// const bdy = document.getElementById("bdy");
+// bdy.addEventListener('click', function() {
+//     window.location.href = "http://localhost:3000/home";
+// });
+
+
+
+// const  car= document.getElementById("car");
+// bdy.addEventListener('click', function() {
+//     window.location.href = "http://localhost:3000/home";
+// });
+
+
+const  cntc= document.getElementById("car1");
+cntc.addEventListener('click', function() {
+    window.location.href = "https://amer-3.onrender.com/group?";
 });
 
-
-
-const  car= document.getElementById("car");
-bdy.addEventListener('click', function() {
-    window.location.href = "http://localhost:3000/home";
+const  cntc1= document.getElementById("car2");
+cntc1.addEventListener('click', function() {
+    window.location.href = "https://lazhar.onrender.com/groupHalak?";
 });
 
+const  cntc2= document.getElementById("car3");
+cntc2.addEventListener('click', function() {
+    window.location.href = "https://lazhar.onrender.com/groupSaback?";
+});
 
+const  cntc3= document.getElementById("car4");
+cntc3.addEventListener('click', function() {
+    window.location.href = "lazhar.onrender.com/groupDahan?";
+    window.location.href = "https://lazhar.onrender.com/groupDahan?";
 
-
+});
 
 
 
@@ -56,3 +75,23 @@ bdy.addEventListener('click', function() {
 //  ---------------------------------------------------------------------------------------------------
 
 
+
+
+function vrvv(){
+    window.location.href = "http://localhost:3000/group?";
+    document.body.style.backgroundColor="red"
+}
+function vrvv2(){
+    window.location.href = "https://lazhar.onrender.com/groupHalak?";
+}
+function vrvv3(){
+    window.location.href = "https://lazhar.onrender.com/groupHalak?";
+}
+function vrvv4(){
+    window.location.href = "lazhar.onrender.com/groupHalak?";
+}
+function goToLink() {
+    window.location.href = "/groupHalak"; 
+    document.body.style.backgroundColor="red"
+    // الرابط المطلوب
+}

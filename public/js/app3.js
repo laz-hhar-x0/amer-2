@@ -23,9 +23,10 @@ const contactform = document.querySelector('.form-container');
     xhr.onload = function(){
         console.log(xhr.responseText);
         if(xhr.responseText == 'success'){
-            alert(' تم ارسال رسالتك بنجاح  ✅📩');
+            alert(' ✅📩 تم ارسال رسالتك بنجاح');
             namee.value = '';
             email.value = '';
+            type,value = '';
             subject.value = '';
             message.value = '';
         }else{

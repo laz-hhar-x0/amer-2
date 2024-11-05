@@ -1,232 +1,4 @@
 
-// const express = require("express");
-// const { default: mongoose } = require("mongoose");
-// const app = express();
-// const port = 3000;
-// app.use(express.static('public'));
-// app.use(express.urlencoded({ extended: true }));
-// app.set('view engine', 'ejs');
-// const lazhar = require("./models/articleSchema");
-
-
-
-// // mongodb://lazhhar45:Lazhar123@cluster0-shard-00-00.50x18.mongodb.net:27017,cluster0-shard-00-01.50x18.mongodb.net:27017,cluster0-shard-00-02.50x18.mongodb.net:27017/?ssl=true&replicaSet=atlas-ysqnqs-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0
-
-
-
-// mongoose.connect("mongodb://lazhhar45:Lazhar123@cluster0-shard-00-00.50x18.mongodb.net:27017,cluster0-shard-00-01.50x18.mongodb.net:27017,cluster0-shard-00-02.50x18.mongodb.net:27017/?ssl=true&replicaSet=atlas-ysqnqs-shard-0&authSource=admin&retryWrites=true&w=majority&appName=Cluster0")
-// .then(()=>{
-//     app.listen(port, () =>{
-//         console.log(`Server is running successfully With "  DATA BASE "  : http://localhost:${port}/`);
-//     });
-// })
-// .catch((err) => {
-//     console.log(err);
-// });
-
-
-
-
-
-
-// // ----------------------------------------------------------------------------------------------------------------------
-// // ----------------------------------------------------------------------------------------------------------------------
-// // --------  GET request -----------------------------------------------------------------------------
-// app.get("/", (req, res) => {
-    
-//     res.render('open', { } );
-// });
-
-// app.get("/LogIn", (req, res) => {
-
-//     lazhar.find()
-//     .then((result ) => {
-//         res.render("LogIn", {arr: result })
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//     });
-
-// });
-
-
-// app.get("/home", (req, res) => {
-
-//     lazhar.find()
-//     .then((result ) => {
-//         res.render("home", {arr: result })
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//     });
-
-// });
-
-// app.get("/CreatCompte", (req, res) => {
-
-//     lazhar.find()
-//     .then((result ) => {
-//         res.render("CreatCompte", {arr: result })
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//     });
-
-// });
-
-
-
-// app.get("/edit", (req, res) => {
-//     lazhar.find()
-//     .then((result ) => {
-//         res.render("edit", {arr: result })
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//     });
-
-// });
-
-// app.get("/group", (req, res) => {
-
-//     lazhar.find()
-//     .then((result ) => {
-//         res.render("group", {arr: result })
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//     });
-
-// });
-
-// app.get("/truck", (req, res) => {
-//     lazhar.find()
-//     .then((result ) => {
-//         res.render("truck", {arr: result })
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//     });
-// });
-
-// app.get("/phone", (req, res) => {
-//     lazhar.find()
-//     .then((result ) => {
-//         res.render("phone", {arr: result })
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//     });
-// });
-
-// app.get("/cars", (req, res) => {
-//     lazhar.find()
-//     .then((result ) => {
-//         res.render("cars", {arr: result })
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//     });
-// });
-
-// app.get("/briefcase", (req, res) => {
-//     lazhar.find()
-//     .then((result ) => {
-//         res.render("briefcase", {arr: result })
-//     })
-//     .catch((err) => {
-//       console.log(err)
-//     });
-// });
-
-// // -----------------------------------------------------------------------------------------------------
-
-
-
-// // ----------------------------------------------------------------------------------------------------------------------
-// // ----------------------------------------------------------------------------------------------------------------------
-// // --------  POST request -----------------------------------------------------------------------------
-
-
-// app.post("/SendData", (req, res) => {
-//     const Lazhar = new lazhar(req.body);
-  
-//     Lazhar
-//     .save()
-//       .then( result => {
-//         console.log("------------------  add informaion is correct ----------------------------");
-//         res.redirect("/Login");
-//       })
-//       .catch( err => {
-//         console.log(err);
-//       });
-//   });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-// ---------------------                            -------------------------------------------
-// ---------------------                            ---------------------------------------
-// ---------------------                            ---------------------------------------
-// ---------------------          lazhar            ---------------------------------------
-// ---------------------                            ---------------------------------------
-// ---------------------                            ---------------------------------------
-// ---------------------                            ---------------------------------------
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-// --------------------------------------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-
-
-
 const express = require("express");
 const { default: mongoose } = require("mongoose");
 const app = express();
@@ -276,8 +48,6 @@ app.get("/", (req, res) => {
     res.render('open', { } );
 });
 
-
-
 app.get('/Contact',(req,res)=>{
 
   lazhar.find()
@@ -290,85 +60,21 @@ app.get('/Contact',(req,res)=>{
 
 });
 
+app.get('/Contact2',(req,res)=>{
 
+  lazhar.find()
+    .then((result ) => {
+        res.render("contact2.ejs", {arr: result })
+    })
+    .catch((err) => {
+      console.log(err)
+    });
 
-app.get("/Login",  (req, res) => {
-      res.render("LogIn")
 });
 
-
-// ------------------------------------------------------
-
-
-
-
-
-
-
-
-
-
-app.post("/Login", async (req, res) => {
-  try {
-    console.log("--------------------------------------------------\n--------------------------------------------------");
-
-    const { email, password } = req.body;
-
-    // Retrieve user using email
-    if (user = await lazhar.findOne({ mailll: email })) {
-      
-    
-
-      console.log(`This is your DATA : ${user ? `${user.mailll} : ${user.passss}` : 'User not found'}`);
-      console.log(`This is your USER : ${email} : ${password}`);
-
-      // Check if the password matches
-        if (user && user.passss === password) {
-
-          const userData=[{ emil: user.nameee},{ pas: user.passss }];
-          console.log(userData) 
-          module.exports = userData;
-
-
-
-          res.json({ success: true, redirectUrl: "/home", userData});  
-        } else {
-          res.json({ success: false, message: " 💔 كلمة المرور غير صحيحة " });
-        }
-      }else{
-        res.json({ success: false, message: " 🥲 البريد  غير صحيح" });
-      }
-  }catch (err) {
-        console.error(err);
-        res.status(500).json({ success: false, message: "حدث خطأ أثناء العملية" });
-      
-    
-    }
-  });
-
-  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+app.get("/Login",  (req, res) => {
+      res.render("LogIn");
+});
 
 app.get("/home", (req, res) => {
 
@@ -393,8 +99,6 @@ app.get("/CreatCompte", (req, res) => {
     });
 
 });
-
-
 
 app.get("/edit", (req, res) => {
     lazhar.find()
@@ -518,6 +222,7 @@ app.get("/groupHalak", (req, res) => {
     console.log(err)
   });
 });
+
 // -----------------------------------------------------------------------------------------------------
 
 
@@ -576,3 +281,42 @@ app.post('/Contact', (req, res) => {
         }
       })
 });
+
+app.post("/Login", async (req, res) => {
+  try {
+    console.log("--------------------------------------------------\n--------------------------------------------------");
+
+    const { email, password } = req.body;
+
+    // Retrieve user using email
+    if (user = await lazhar.findOne({ mailll: email })) {
+      
+    
+
+      console.log(`This is your DATA : ${user ? `${user.mailll} : ${user.passss}` : 'User not found'}`);
+      console.log(`This is your USER : ${email} : ${password}`);
+
+      // Check if the password matches
+        if (user && user.passss === password) {
+
+          // const userData=[{ emil: user.nameee},{ pas: user.passss }];
+          const userData=  user.nameee;
+          console.log(userData) 
+          module.exports = userData;
+
+
+
+          res.json({ success: true, redirectUrl: "/home", userData});  
+        } else {
+          res.json({ success: false, message: " ❌ كلمة المرور غير صحيحة " });
+        }
+      }else{
+        res.json({ success: false, message: " ❌📩 البريد  غير صحيح" });
+      }
+  }catch (err) {
+        console.error(err);
+        res.status(500).json({ success: false, message: "حدث خطأ أثناء العملية" });
+      
+    
+    }
+  });
