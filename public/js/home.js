@@ -6,21 +6,6 @@
 
 
 
-
-
-// const bdy = document.getElementById("bdy");
-// bdy.addEventListener('click', function() {
-//     window.location.href = "http://localhost:3000/home";
-// });
-
-
-
-// const  car= document.getElementById("car");
-// bdy.addEventListener('click', function() {
-//     window.location.href = "http://localhost:3000/home";
-// });
-
-
 const  cntc= document.getElementById("car1");
 cntc.addEventListener('click', function() {
     window.location.href = "https://amer-3.onrender.com/group?";
@@ -77,21 +62,23 @@ cntc3.addEventListener('click', function() {
 
 
 
-function vrvv(){
-    window.location.href = "http://localhost:3000/group?";
-    document.body.style.backgroundColor="red"
-}
-function vrvv2(){
-    window.location.href = "https://lazhar.onrender.com/groupHalak?";
-}
-function vrvv3(){
-    window.location.href = "https://lazhar.onrender.com/groupHalak?";
-}
-function vrvv4(){
-    window.location.href = "lazhar.onrender.com/groupHalak?";
-}
-function goToLink() {
-    window.location.href = "/groupHalak"; 
-    document.body.style.backgroundColor="red"
-    // الرابط المطلوب
-}
+  
+async function loginUser (email, password) {
+    const response = await fetch('/Login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email, password }),
+    });
+  
+    const data = await response.json();
+  
+    if (data.success) {
+      // Redirect to home page and pass the userName
+      localStorage.setItem('userName', data.userName); // Store userName in localStorage
+      window.location.href = data.redirectUrl; // Redirect to home
+    } else {
+      alert(data.message); // Display error message
+    }
+  }

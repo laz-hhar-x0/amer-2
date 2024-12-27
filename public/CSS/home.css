@@ -150,25 +150,26 @@ body{
         width: 346px;
         height: 40vh;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, .6fr);
         gap: 5px; 
         width: 80%;
-        margin: 17px auto;
+        margin: 67px auto;
         padding: 3px;
         overflow: hidden;
     }
-
-.car{
-    width: 130px;
-    height: 140px;
-    padding: 5px;
-    display: flex;
-    align-items:flex-end;
-    background-size: cover; 
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 3px;
-    cursor: pointer;
+    
+    .car{
+        width: 130px;
+        height: 140px;
+        padding: 5px;
+        margin: 0px auto;
+        display: flex;
+        align-items:flex-end;
+        background-size: cover; 
+        background-position: center;
+        background-repeat: no-repeat;
+        border-radius: 8px;
+        cursor: pointer;
 }
 
 #gren{

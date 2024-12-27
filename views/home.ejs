@@ -24,7 +24,7 @@
                 <div class="hed">
 
                     <div id="information">
-                        <h1 id="informationHone">Hi ! <%= arr[0].nameee %> </h1>
+                        <h1 id="welcomeMessage"></h1>
                         <h5>Street , City ,Country   </h5>
                     </div>
                     
@@ -181,6 +181,22 @@
         </div>
     </div>
 
+    <script>
+        
+        // Get the userName from localStorage
+        // const userName = localStorage.getItem('userName');
+            document.getElementById('welcomeMessage').textContent = `Hello, ${userName}!`;
+
+        // Display the welcome message
+        // if (userName) {
+        //     document.getElementById('welcomeMessage').textContent = `Hello, ${userName}!`;
+        // } else {
+        //     document.getElementById('welcomeMessage').textContent = 'Hello, Guest!';
+        // }
+
+    </script>
+
+   
 
     <script src="/public/js/group.js"></script>
     <script src="/js/home.js"></script>

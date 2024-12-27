@@ -282,41 +282,67 @@ app.post('/Contact', (req, res) => {
       })
 });
 
-app.post("/Login", async (req, res) => {
-  try {
-    console.log("--------------------------------------------------\n--------------------------------------------------");
+// app.post("/Login", async (req, res) => {
+//   try {
+//     console.log("--------------------------------------------------\n--------------------------------------------------");
 
-    const { email, password } = req.body;
+//     const { email, password } = req.body;
 
-    // Retrieve user using email
-    if (user = await lazhar.findOne({ mailll: email })) {
+//     // Retrieve user using email
+//     if (user = await lazhar.findOne({ mailll: email })) {
       
     
 
-      console.log(`This is your DATA : ${user ? `${user.mailll} : ${user.passss}` : 'User not found'}`);
+//       console.log(`This is your DATA : ${user ? `${user.mailll} : ${user.passss}` : 'User not found'}`);
+//       console.log(`This is your USER : ${email} : ${password}`);
+
+//       // Check if the password matches
+//         if (user && user.passss === password) {
+
+//           const userName=  user.nameee;
+//           console.log(userData) 
+
+
+
+//           res.json({ success: true, redirectUrl: "/home"});  
+//         } else {
+//           res.json({ success: false, message: " ❌ كلمة المرور غير صحيحة " });
+//         }
+//       }else{
+//         res.json({ success: false, message: " ❌📩 البريد  غير صحيح" });
+//       }
+//   }catch (err) {
+//         console.error(err);
+//         res.status(500).json({ success: false, message: "حدث خطأ أثناء العملية" });
+      
+//     }
+//   });
+
+
+  app.post("/Login", async (req, res) => {
+    try {
+      console.log("--------------------------------------------------\n--------------------------------------------------");
+  
+      const { email, password } = req.body;
+  
+      // Retrieve user using email
+      const user = await lazhar.findOne({ mailll: email });
+  
+      console.log(`This is your DATA : ${user ? `${user.mailll} : ${user.passss}` : 'User  not found'}`);
       console.log(`This is your USER : ${email} : ${password}`);
-
+  
       // Check if the password matches
-        if (user && user.passss === password) {
-
-          // const userData=[{ emil: user.nameee},{ pas: user.passss }];
-          const userData=  user.nameee;
-          console.log(userData) 
-          module.exports = userData;
-
-
-
-          res.json({ success: true, redirectUrl: "/home", userData});  
-        } else {
-          res.json({ success: false, message: " ❌ كلمة المرور غير صحيحة " });
-        }
-      }else{
-        res.json({ success: false, message: " ❌📩 البريد  غير صحيح" });
+      if (user && user.passss === password) {
+        const userName = user.nameee;  // Get the user's name
+        console.log(userName);  // Log the username
+  
+        // Send userName in the response
+        res.json({ success: true, redirectUrl: "/home", userName });  
+      } else {
+        res.json({ success: false, message: " ❌ كلمة المرور غير صحيحة " });
       }
-  }catch (err) {
-        console.error(err);
-        res.status(500).json({ success: false, message: "حدث خطأ أثناء العملية" });
-      
-    
+    } catch (err) {
+      console.error(err);
+      res.status(500).json({ success: false, message: "حدث خطأ أثناء العملية" });
     }
   });
